@@ -1,0 +1,120 @@
+.mid{
+  padding-top: 100px;
+  width: 100%;
+  position: relative;
+  height: 550px;
+}
+
+.left{
+  width: 800px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.bar-blog{
+  width: 350px;
+  height: 1px;
+  border-radius: 5px;
+  background-color: #8cd1f4;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  position: relative;
+  margin-left: -30px;
+}
+
+.right{
+  width: 250px;
+  height: 100%;
+  /*background-color: #8A2BE2;*/
+  position: absolute;
+  right: 0;
+}
+
+#instagram-feed {
+  padding-bottom: 50px;
+}
+
+h1{
+  margin-top: 0;
+  margin-bottom: -10px;
+}
+
+#about-pic{
+  position: absolute;
+  margin: 0 auto;
+  width: 40%;
+  margin-top: 10px;
+  left: 0;
+  right: 0;
+}
+
+#about-pic-border{
+  position: absolute;
+  width: 55%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  margin-top: -75px;
+}
+
+#bio-text {
+  position: absolute;
+  vertical-align: text-top;
+  text-align: left;
+  font-size: 16px;
+  /*font-family: 'Open Sans Condensed', sans-serif;*/
+  font-family: Gotham-Light;
+  width: 75%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.bottom {
+  position: relative;
+  height: 750px;
+}
+
+#resume-pdf{
+  background-image: url(http://i.imgur.com/GILZneb.png);
+  height: 144px;
+  width: 216px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  bottom: 50px;
+}
+
+/*#about-resume {
+  vertical-align: text-top;
+  position: absolute;
+  width: 80%;
+  margin-left: 10%;
+}*/
+
+.resume-underline {
+  font-weight: bold;
+  text-decoration: underline;
+  list-style-type: none;
+}
+
+.resume-bold {
+  font-weight: bold;
+  list-style-type: none;
+}
+
+.resume-line li{
+  list-style-type: none;
+  display: inline;
+  padding-right: 20px;
+}
+
+#page-indicator {
+	background-image: url("../SiteIcons/NavigationIcons/PageIndicator.png");
+	width: 9px;
+	height: 9px;
+	margin-left: 835px;
+	margin-bottom: -10px;
+}

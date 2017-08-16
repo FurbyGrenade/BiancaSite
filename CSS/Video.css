@@ -1,0 +1,28 @@
+.mid{
+  margin-top: 25;
+  width: 100%;
+  position: relative;
+  height: 800px;
+  margin-left:25px;
+}
+
+.video-text {
+	margin-left: 300px;
+  position: absolute;
+  vertical-align: text-top;
+  text-align: left;
+  font-size: 19px;
+  font-family: Gotham-Light;
+  width: 80%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+#page-indicator {
+	background-image: url("../SiteIcons/NavigationIcons/PageIndicator.png");
+	width: 9px;
+	height: 9px;
+	margin-left: 350px;
+	margin-bottom: -10px;
+}

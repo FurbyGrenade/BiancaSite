@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+	<script type="text/javascript">google.load("feeds", "1");</script>
+	<link href='http://fonts.googleapis.com/css?family=Syncopate' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="../CSS/Blog.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/Nav.css">
+	<script type="text/javascript" src="../JScript/Nav.js"></script>
+	<script type="text/javascript" src="../JScript/Blog.js"></script>
+<title>HTML5, CSS3 and JavaScript demo</title>
+</head>
+<body>
+	<div class="body">
+    	<div class="banner">
+      		<div class="banner-social">
+		        <ul>
+		        	<li><a target="_blank" href="https://www.linkedin.com/profile/view?id=74718498"><div class="social-linkedin"></div></a></li>
+		          	<li><a target="_blank" href="http://instagram.com/biancaandthecity"><div class="social-instagram"></div></a></li>
+		          	<li><a target="_blank" href="http://www.facebook.com/biancaandthecity"><div class="social-fb"></div></a></li>
+		          	<li><a target="_blank" href="http://www.pinterest.com/biancatake1/"><div class="social-pinterest"></div></a></li>
+		          	<li><a target="_blank" href="http://www.twitter.com/biancatake1"><div class="social-twitter"></div></a></li>
+		          	<li><a target="_blank" href="mailto:bianca.dimaio@gmail.com"><div class="social-mail"></div></a></li>
+		        </ul>
+			</div>
+			<div id="owl-eyes-container">
+				<div id="owl-eyes"></div>
+			</div>
+		</div>
+    
+    	<a id="anchor"></a>
+    
+    	<div class="bar"></div>
+    
+	    <div class="nav">
+	      	<ul>
+		    	<a href="Blog.html#anchor"><li id="nav-blog"></li></a>
+		    	<a href="Photos.html#anchor"><li id="nav-photos"></li></a>
+		       	<a href="Video.html#anchor"><li id="nav-videos"></li></a>
+		     	<a href="Juggling.html#anchor"><li id="nav-juggling"></li></a>
+		       	<a href="Piano.html#anchor"><li id="nav-piano"></li></a>
+	          	<a href="About.html#anchor"><li id="nav-about"></li></a>
+	          	<a href="Contact.html#anchor"><li id="nav-contact"></li></a>
+	      	</ul>
+	    </div>
+	    
+	    <div id="page-indicator"></div>
+    
+    	<div class="bar"></div>
+    
+    	<div class="mid">
+        	<div class="left">
+        		<!-- blog feed -->
+        		<div id="feed"></div>
+        		<script type="text/javascript">
+					var feedcontainer=document.getElementById("feed");
+		            var feedurl="http://bianca-blue.blogspot.com/feeds/posts/default";
+		            var feedlimit=3;
+		            var rssoutput="<ul>";
+
+		            function rssfeedsetup(){
+		                var feedpointer=new google.feeds.Feed(feedurl);
+		                feedpointer.setNumEntries(feedlimit);
+		                feedpointer.load(displayfeed);
+		            }
+
+					function displayfeed(result){
+			            if (!result.error){
+			                var thefeeds=result.feed.entries;
+			                    for (var i=0; i<thefeeds.length; i++){
+			                    	rssoutput+="<li class='blog-text' style='list-style-type: none; margin-left:-25px; margin-right:25px'>" + "<h1>" + thefeeds[i].title + "</h1></br>" + thefeeds[i].content + "</li>";
+			                    	rssoutput+="<div class='bar-blog'></div>";
+			                    }
+			                      
+			                	rssoutput+="</ul>";
+			                	feedcontainer.innerHTML=rssoutput;
+			             }
+			             else
+			             	alert("Error fetching feeds!");
+			        }
+
+          			window.onload=function(){
+            			rssfeedsetup();
+          			};
+				</script>
+		        <!-- end blog feed -->
+		        
+		        <!-- copyright end of blog posts  -->
+		        <div class="copyright">
+			    	<div class="copyright-bar"></div>
+			    	Copyright &#169; Bianca DiMaio
+	    		</div>
+			</div>
+      
+			<div class="right">
+		        <!-- SnapWidget -->
+		        <div id="instagram-feed">
+					<iframe src="http://snapwidget.com/in/?u=YmlhbmNhYW5kdGhlY2l0eXxpbnwxMjR8Mnw2fHxub3wyfG5vbmV8b25TdGFydHx5ZXN8bm8=&ve=021014" title="Instagram Widget" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:252px; height:756px"></iframe>
+	        	</div>
+	        	<!-- end SnapWidget -->
+	        
+	        	<!--twitter feed -->
+	        	<a class="twitter-timeline"  href="https://twitter.com/biancatake1" data-widget-id="512414244260696064">Tweets by @biancatake1</a>
+	        	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	        	<!--end twitter feed -->
+	      	</div>
+		</div>
+		
+	</div>
+</body>
+</html>

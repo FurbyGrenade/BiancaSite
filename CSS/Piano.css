@@ -1,0 +1,37 @@
+#page-indicator {
+	background-image: url("../SiteIcons/NavigationIcons/PageIndicator.png");
+	width: 9px;
+	height: 9px;
+	margin-left: 680px;
+	margin-bottom: -10px;
+}
+
+.mid{
+  padding-top: 50px;
+  width: 100%;
+  position: relative;
+  height: 1000px;
+}
+
+#piano-vid {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 80%;
+}
+
+#spotify-piano {
+	position: absolute;
+	width: 20%;
+	left:10%;
+	top: 570px;
+}
+
+#piano-text {
+	position: absolute;
+	right: 10%;
+	top: 570px;
+	width: 50%;
+	height: 400px;
+}
